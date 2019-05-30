@@ -1,0 +1,32 @@
+"""
+Dada uma lista de strings [] retorne uma lista com strings
+em ordem alfabética. A exceção é que as palavras começadas
+pela letra x devem vir primeiro, também respeitando a ordem
+alfabética. Exemplo:['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
+retorna ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
+Dica: isto pode ser feito usando duas listas e ordenando-as antes
+de combiná-las
+"""
+
+# B. front_x
+# Given a list of strings, return a list with the strings
+# in sorted order, except group all the strings that begin with 'x' first.
+# e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
+# ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
+# Hint: this can be done by making 2 lists and sorting each of them
+# before combining them.
+
+
+def front_x(words):
+    # +++your code here+++
+    lista1 = [] # criamos a lista1[] para receber as palavras iniciadas por 'x'
+    lista2 = [] # criamos a lista2[] para receber as demais palavras
+    for i in (words): # para todas as palavras da lista de strings[words]
+        if i[0] == 'x': # se a palavra da lista dada tiver 'x' na posição[0]
+            lista1.append(i) # a variavel lista1 recebe esta palavra
+        else: # se não
+            lista2.append(i) # a variável lista2 recebe a palavra testada
+
+    return sorted(lista1) + sorted(lista2) # retornamos a lista1 (com x, ordenada) concatenada com a lista2
+
+print(front_x(['mereca', 'salto', 'america', 'banana', 'xaveco'])) # linha de teste. para anular basta comentar #
