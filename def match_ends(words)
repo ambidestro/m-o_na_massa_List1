@@ -1,0 +1,40 @@
+# A. match_ends
+# Given a list of strings, return the count of the number of
+# strings where the string length is 2 or more and the first
+# and last chars of the string are the same.
+# Note: python does not have a ++ operator, but += works.
+def match_ends(words):
+    # +++your code here+++
+    count = 0
+    for cada_palavra_da_lista_dada in (words):
+        if len(cada_palavra_da_lista_dada) > 1 and cada_palavra_da_lista_dada[0] == cada_palavra_da_lista_dada[-1]:
+            count += 1
+        else:
+            count = count
+    return count
+
+# print(match_ends(['arara', 'cebola', 'mussum'])) Esta linha é teste da função. Para teste remova o #
+
+"""
+
+Dada uma [LISTA] de strings, retorne um contador com o número de
+strings quando o tamanho da string for 2 ou mais e a primeira e a 
+última letra desta string forem as mesmas.
+Nota: python não tem um operador ++, mas o operador += funciona (incrementador)
+
+
+a entrada de dados será uma lista de strings ['a', 'b', 'c', 'd'] e para cada string
+deveremos checar se para cada stringa a condição dada é verdadeira.
+sendo, a váriavel de retorno "count" deverá sem incrementada em 1.
+a lógica é:
+
+1 - Criar a variável count com valor zero
+2 - fazer um loop for para checar a condição exigida
+3 - fazer a checagem SE para a condição AND:
+    tamanho da string igual ou maior que dois e primeira e última letras iguais.
+    Sendo verdade, a váriavel count é INCREMENTADA em 1.
+    SENÃO count continua sendo ela mesma
+
+AGORA É SÓ TRADUZIR PARA PYTHON!!!
+
+"""
