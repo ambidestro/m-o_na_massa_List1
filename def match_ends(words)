@@ -1,20 +1,3 @@
-# A. match_ends
-# Given a list of strings, return the count of the number of
-# strings where the string length is 2 or more and the first
-# and last chars of the string are the same.
-# Note: python does not have a ++ operator, but += works.
-def match_ends(words):
-    # +++your code here+++
-    count = 0
-    for cada_palavra_da_lista_dada in (words):
-        if len(cada_palavra_da_lista_dada) > 1 and cada_palavra_da_lista_dada[0] == cada_palavra_da_lista_dada[-1]:
-            count += 1
-        else:
-            count = count
-    return count
-
-# print(match_ends(['arara', 'cebola', 'mussum'])) Esta linha é teste da função. Para teste remova o #
-
 """
 
 Dada uma [LISTA] de strings, retorne um contador com o número de
@@ -38,3 +21,21 @@ a lógica é:
 AGORA É SÓ TRADUZIR PARA PYTHON!!!
 
 """
+
+# A. match_ends
+# Given a list of strings, return the count of the number of
+# strings where the string length is 2 or more and the first
+# and last chars of the string are the same.
+# Note: python does not have a ++ operator, but += works.
+def match_ends(words):
+    # +++your code here+++
+    count = 0
+    for cada_palavra_da_lista_dada in (words):
+        if len(cada_palavra_da_lista_dada) > 1 and cada_palavra_da_lista_dada[0] == cada_palavra_da_lista_dada[-1]:
+            count += 1
+        else:
+            count = count
+    return count
+
+# print(match_ends(['arara', 'cebola', 'mussum'])) '''Esta linha é teste da função. Para testar remova o #'''
+
